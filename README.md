@@ -1,7 +1,7 @@
 You must add .env variables to run this project:
 
-VITE_WEATHER_API_KEY=YOUR_KEY
-VITE_GOOGLE_MAPS_API_KEY=YOUR_KEY
+- VITE_WEATHER_API_KEY=YOUR_KEY
+- VITE_GOOGLE_MAPS_API_KEY=YOUR_KEY
 
 The google maps api key is configured from the places api.
 You can create an API key here:
