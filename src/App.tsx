@@ -14,7 +14,6 @@ import TimePicker from "./components/TimePicker";
 import LocationPicker from "./components/LocationPicker";
 import type { PlaceResult } from "./utils/places_api";
 import { Switch } from "./components/ui/switch";
-import useTheme from "./hooks/useTheme";
 import { useTemperature } from "./context/TemperatureContext";
 
 function App() {
@@ -22,11 +21,9 @@ function App() {
   const [day, setDay] = useState<DaySlot>(DaySlotEnum.MONDAY);
   const [timeOfDay, setTimeOfDay] = useState<TimeSlot>(TimeSlotEnum.MORNING);
 
-  const { toggleTheme } = useTheme();
   const { setUnit } = useTemperature();
 
   const handleToggle = (checked: boolean) => {
-    toggleTheme();
     setUnit(checked ? "M" : "I");
   };
   return (

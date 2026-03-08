@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 
 type TemperatureContextType = {
   unit: "I" | "M";
@@ -17,6 +17,10 @@ export function TemperatureProvider({
   const [unit, setUnit] = useState<"I" | "M">(() => {
     return (localStorage.getItem("tempUnit") as "I" | "M") || "I";
   });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("coin", unit === "M");
+  }, [unit]);
 
   const handleSetUnit = (newUnit: "I" | "M") => {
     setUnit(newUnit);

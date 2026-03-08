@@ -120,7 +120,7 @@ const WeatherCard = ({
                 <span className="font-bold">
                   {CONDITION_DESCRIPTIONS[conditionIcon] || condition}
                 </span>
-                | {Math.round(convertedAverage)}°{unit === "M" ? "C" : "F"}
+                | {Math.round(convertedAverage)} °{unit === "M" ? "C" : "F"}
               </p>
               {source !== "fcst" ? (
                 <HoverCard openDelay={10} closeDelay={100}>
